@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Freak Cafe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      background-color: #EFE9E3;
+      background-image: radial-gradient(#d1c7bc 0.5px, transparent 0.5px);
+      background-size: 30px 30px;
+      margin: 0;
+      padding: 0;
+      font-family: 'Glacier', 'Trebuchet MS', sans-serif;
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    /* Standardized 8-Item Aesthetic Navbar */
+    .navbar {
+      background: rgba(239, 233, 227, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1100px;
+    }
+
+    .navbar a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #5D4037;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 12px;
+      transition: all 0.3s ease;
+      min-width: 75px;
+    }
+
+    .navbar a i {
+      font-size: 18px;
+      margin-bottom: 4px;
+      color: #A68A64;
+    }
+
+    .navbar a:hover {
+      background-color: #E4DCD3;
+      transform: translateY(-2px);
+    }
+
+    .navbar a.active {
+      background-color: #C9B59C;
+      color: white;
+    }
+    .navbar a.active i { color: white; }
+
+    /* Elevated Foods Grid */
+    .foods-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .food-item {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .food-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    }
+
+    .food-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .food-name {
+      font-weight: bold;
+      color: #4B2E2A;
+      font-size: 1.1rem;
+      padding-bottom: 10px;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #4B2E2A;
+      color: #EFE9E3;
+      padding: 50px 20px;
+      margin-top: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: left;
+    }
+
+    .footer h3 { margin-bottom: 10px; }
+    .footer ul { list-style: none; padding: 0; opacity: 0.8; font-size: 0.9rem; }
+    .footer ul li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="Homepage.html"><i class="fa-solid fa-house"></i>Home</a>
+      <a href="drinks.html"><i class="fa-solid fa-mug-hot"></i>Drinks</a>
+      <a href="foods.html" class="active"><i class="fa-solid fa-utensils"></i>Foods</a>
+      <a href="Promo.html"><i class="fa-solid fa-tags"></i>Promos</a>
+      <a href="locations.html"><i class="fa-solid fa-map-location-dot"></i>Locations</a>
+      <a href="contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a>
+      <a href="notes.html"><i class="fa-solid fa-pen-nib"></i>Notes</a>
+      <a href="reservations.html"><i class="fa-solid fa-calendar-check"></i>Reservations</a>
+    </div>
+  </nav>
+
+  <div class="foods-container"> 
+    <div class="food-item"><img src="Strawberry Cream Cheese Danish.jfif"><div class="food-name">Strawberry Cream Cheese</div></div> 
+    <div class="food-item"><img src="Cream Puffs Bites.jfif"><div class="food-name">Chocolate Puff</div></div> 
+    <div class="food-item"><img src="Berry Cream Cheese Danish.jfif"><div class="food-name">Danish Blueberry</div></div> 
+    <div class="food-item"><img src="Almond Puff Pastry fingers.jfif"><div class="food-name">Almond Puff</div></div> 
+    <div class="food-item"><img src="tiramisu croissants.jfif"><div class="food-name">Milky Croissant</div></div> 
+    <div class="food-item"><img src="Pesto Pasta.jfif"><div class="food-name">Chicken Pesto</div></div> 
+    <div class="food-item"><img src="spaghetti carbonara.jfif"><div class="food-name">Spaghetti Carbonara</div></div> 
+    <div class="food-item"><img src="Creamy Vagan.jfif"><div class="food-name">Creamy Vegan</div></div> 
+    <div class="food-item"><img src="Blackout cake.jfif"><div class="food-name">Blackout Cake</div></div> 
+    <div class="food-item"><img src="Red velvet cake.jfif"><div class="food-name">Red Velvet Cake</div></div> 
+    <div class="food-item"><img src="Vanilla cake.jfif"><div class="food-name">Classic Vanilla Cake</div></div> 
+    <div class="food-item"><img src="Sponge cake.jfif"><div class="food-name">Sponge Cake</div></div> 
+    <div class="food-item"><img src="Ube Dulce cake.jfif"><div class="food-name">Ube Dulce Cake</div></div> 
+    <div class="food-item"><img src="overload fries.jfif"><div class="food-name">Overload Fries</div></div> 
+    <div class="food-item"><img src="Caprese salad.jfif"><div class="food-name">Caprese salad</div></div> 
+  </div>
+
+  <div class="footer">
+    <div>
+      <h3>Freak Cafe</h3>
+      <p><i>hi@freakcafe.com</i></p>
+    </div>
+    <div>
+      <h3>Find Us</h3>
+      <ul>
+        <li>3333 Zapote, Santa Cruz, Makati</li>
+        <li>BGC High Street</li>
+        <li>España Blvd, Manila</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Policies</h3>
+      <ul>
+        <li>Privacy Policy</li>
+        <li>Terms of Service</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

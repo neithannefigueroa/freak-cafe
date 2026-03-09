@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Freak Cafe</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      background-color: #EFE9E3;
+      /* Subtle textured background instead of floating icons */
+      background-image: radial-gradient(#d1c7bc 0.5px, transparent 0.5px);
+      background-size: 30px 30px;
+      margin: 0;
+      padding: 0;
+      font-family: 'Glacier', 'Trebuchet MS', sans-serif;
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    /* Modernized Navigation Bar */
+    .navbar {
+      background: rgba(239, 233, 227, 0.8);
+      backdrop-filter: blur(10px); /* Frosted glass effect */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar a {
+      display: flex;
+      flex-direction: column; /* Stack icon over text */
+      align-items: center;
+      color: #5D4037;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      min-width: 80px;
+    }
+
+    /* Icon styling */
+    .navbar a i {
+      font-size: 20px;
+      margin-bottom: 6px;
+      color: #A68A64;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #E4DCD3;
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    .navbar a:hover i {
+      transform: scale(1.2);
+      color: #7B5E43;
+    }
+
+    /* Active State/Current Page */
+    .navbar a.active {
+      background-color: #C9B59C;
+      color: white;
+    }
+    .navbar a.active i { color: white; }
+
+    /* Notes container */
+    .notes {
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      z-index: 10;
+      position: relative;
+    }
+    
+    .note {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      border-left: 5px solid #C9B59C;
+      transition: all 0.3s ease;
+    }
+    
+    .note:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .date {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #A68A64;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .message {
+      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    .signature {
+      text-align: right;
+      font-size: 0.85em;
+      margin-top: 10px;
+      font-style: italic;
+      color: #888;
+    }
+
+    .send-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #4B2E2A;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .send-btn:hover {
+      transform: translateY(-5px);
+      background-color: #63403a;
+    }
+
+    .footer {
+      background-color: #4B2E2A;
+      color: #EFE9E3;
+      padding: 40px 20px;
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="Homepage.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
+      <a href="drinks.html"><i class="fa-solid fa-mug-hot"></i>Drinks</a>
+      <a href="foods.html"><i class="fa-solid fa-utensils"></i>Foods</a>
+      <a href="Promo.html"><i class="fa-solid fa-tags"></i>Promos</a>
+      <a href="locations.html"><i class="fa-solid fa-map-location-dot"></i>Map</a>
+      <a href="contact.html"><i class="fa-solid fa-paper-plane"></i>Contact</a>
+      <a href="notes.html" class="active"><i class="fa-solid fa-pen-nib"></i>Notes</a>
+      <a href="reservations.html"><i class="fa-solid fa-calendar-check"></i>Book</a>
+    </div>
+  </nav>
+
+  <div class="notes">
+    <div class="note">
+      <div class="date">Feb 01, 2026</div>
+      <div class="message">hi to u girl wearing a black ralph lauren polo, i've been mesmerizedd w ur beauty, i hope i can see u again.</div>
+      <div class="signature">— IT guy</div>
+    </div>
+    
+    <div class="note">
+      <div class="date">Feb 03, 2026</div>
+      <div class="message">hello neith! i hope u r doing well, goodluck on ur studies</div>
+      <div class="signature">— childhood friend</div>
+    </div>
+
+    <div class="note">
+      <div class="date">Feb 10, 2026</div>
+      <div class="message">sending warm vibes to everyone studying late nights here, kaya natin to!</div>
+      <div class="signature">— study buddy</div>
+    </div>
+  </div>
+
+  <a href="send.html" class="send-btn">
+    <i class="fa-solid fa-plus"></i> Leave a Note
+  </a>
+
+  <div class="footer">
+    <div>
+        <h3>Freak Cafe</h3>
+        <p>Your safe space in the city.</p>
+    </div>
+    <div>
+        <p><i>hi@freakcafe.com</i></p>
+        <p>3333 Zapote, Santa Cruz, Makati City</p>
+    </div>
+  </div>
+</body>
+</html>
